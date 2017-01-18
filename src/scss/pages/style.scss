@@ -1,0 +1,181 @@
+* {
+  color: black;
+}
+
+body {
+  background: linear-gradient(to bottom, #eacda3 1%, #d6ae7b 100%);
+}
+
+#header {
+  background: #00ff80;
+}
+
+p {
+  color: black;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: Baskerville;
+  font-size: 150px;
+  text-align: center;
+  padding: 10px;
+}
+
+input {
+  color: black;
+  border-radius: 3px;
+}
+
+/*--------------------------navigation---------------------------*/
+#menu1{
+  float: left;
+  margin-top: 2%;
+}
+
+#menu2{
+  float: right;
+}
+
+ul {
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav {
+  display: inline-block;
+  font: bold 18px sans-serif;
+  padding: 10px;
+
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+ul li:hover {
+  background: #F0E68C;
+
+}
+
+.active {
+  background: #cc9900;
+}
+
+/*--------------------------settings---------------------------*/
+.col-lg-8, .col-lg-2 {
+  height: auto;
+  margin: 0;
+}
+
+@media(max-height: 1300px) {
+  .col-lg-8, .col-lg-2 {
+    height: 600px;
+  } 
+}
+
+.topbox {
+  height: auto;
+  border: 0;
+  padding: 20px;
+}
+
+.settings{
+  color: red;
+  font-size: 20px;
+}
+
+td {
+  color: white;
+  font-size: 15px;
+}
+
+/*--------------------------carousel---------------------------*/
+.slideContainer {
+  margin: 20px;
+	padding: 20px;
+	height: auto;
+	border: 3px solid gray;
+  border-radius: 10px;
+}
+
+.slider_wrapper {
+	overflow: hidden;
+	position: relative;
+	height: auto;
+	top: auto;
+}
+
+#image_slider {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#image_slider li {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.mySlides {
+  height: auto;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@media(max-height: 1300px) {
+  .mySlides {
+    height: 500px;
+  } 
+}
+
+.nvgt {
+	position: absolute;
+	top: 50%;
+	height: auto;
+	width: auto;
+	background-color: gray;
+	font-size: 35px;
+	transition: font-size 50px;
+}
+
+.nvgt:hover {
+	opacity: 0.7;
+}
+
+#prev {
+  cursor: pointer;
+	left: 0;
+}
+
+#next {
+  cursor: pointer;
+	right: 0;
+}
+
+/*--------------------------update---------------------------*/
+.caption {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: cyan;
+  opacity: 0.5;
+  color: black;
+  font-size: 25px;
+  font-style: arial;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "toro-project",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpFile.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "bourbon": "^4.2.7",
+    "git-download": "^0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-html-prettify": "^0.0.1",
+    "gulp-nunjucks": "^2.3.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-tasks-bootstrap": "^0.3.3",
+    "node-bourbon": "^4.2.8",
+    "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dianaarceo/toro-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dianaarceo/toro-project/issues"
+  },
+  "homepage": "https://github.com/dianaarceo/toro-project"
+}

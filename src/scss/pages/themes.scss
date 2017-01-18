@@ -1,0 +1,110 @@
+* {
+  color: black;
+}
+
+body {
+  background: linear-gradient(to bottom, #eacda3 1%, #d6ae7b 100%);
+}
+
+#header {
+  background: #00ff80;
+}
+
+p {
+  color: black;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: Baskerville;
+  font-size: 150px;
+  text-align: center;
+  padding: 10px;
+}
+
+input {
+  color: black;
+  border-radius: 3px;
+}
+
+/*--------------------------navigation---------------------------*/
+#main {
+  float: left;
+  margin-top: 2%;
+}
+
+.nav-tabs {
+  float: right;
+  border: 1px solid blue;
+}
+
+a {
+  color: cyan;
+}
+
+ul li:hover {
+  background: cyan;
+}
+
+/*--------------------------carousel---------------------------*/
+.slider_wrapper {
+	overflow: hidden;
+	position: relative;
+	height: auto;
+}
+
+#image_slider {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#image_slider li {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.mySlides {
+  height: auto;
+  width: 100%;
+}
+
+@media(max-height: 1300px) {
+  .mySlides {
+    height: 300px;
+  } 
+}
+
+.nvgt {
+	position: absolute;
+	top: 50%;
+	height: auto;
+	width: auto;
+	background-color: gray;
+	font-size: 35px;
+	transition: font-size 50px;
+}
+
+.nvgt:hover {
+	opacity: 0.7;
+}
+
+#prev {
+  cursor: pointer;
+	left: 0;
+}
+
+#next {
+  cursor: pointer;
+	right: 0;
+}
+
+#pause {
+  cursor: pointer;
+  right: 45%;
+  opacity: 0.3;
+}

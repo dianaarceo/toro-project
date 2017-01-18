@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Slider Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link class="localLinks" rel="stylesheet" href="dist/assets/css/bootstrap.css">
+    <link class="localLinks" rel="stylesheet" type="text/css" href="dist/assets/css/style.css">
+  </head>
+
+  <body>
+    <div class="container-fluid" id="header">
+      <div id="menu1">
+        <ul>
+          <li class="nav"><a href="dist/views/themes.html" class="localLinks">Themes</a></li>
+          <li class="nav active"><a href="dist/views/slidergenerator.html" class="localLinks">Create Slideshow</a></li>
+        </ul>
+      </div>
+      <h1>Create Your Slide</h1>
+    </div>
+    <div class="container-fluid">
+      <p class="settings">Upload atlest 3 pictures:</p>
+      <div class="row">
+        <div class="col-lg-3 topbox">
+          <form id=addUrl>
+            Image1 url: <input id="url1" type="url"><br>
+            Image2 url: <input id="url2" type="url"><br>
+            Image3 url: <input id="url3" type="url">
+            
+          </form> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 topbox ">
+          <button type="button" class="btn btn-primary" onclick="addImage">Add Another Image</button>
+          <button type="button" class="btn btn-primary" onclick="upload()">Upload</button>
+          <div id="menu2">
+            <ul>
+              <li class="active nav"><a href="#" class="localLinks">My Slide</a></li>
+              <li class="nav"><a href="#" class="localLinks">ViewHTML</a></li>
+              <li class="nav"><a href="#" class="localLinks">ViewCSS</a></li>
+              <li class="nav"><a href="#" class="localLinks">ViewJAVASCRIPT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2">
+          <p class="settings">Alignment Settings</p>
+          <form>
+            <div class="form-group">
+              <label> Text Alignment :</label>
+              <select class="form-control" id="textAlignment">
+                <option>left</option>
+                <option selected>center</option>
+                <option>right</option>
+              </select>
+              <label> Textfield Position :</label>
+              <select class="form-control">
+                <option selected>top</option>
+                <option>bottom</option>
+              </select>
+              <label> Font Face :</label>
+              <select class="form-control">
+                <option selected>arial</option>
+                <option>algerian</option>
+                <option>Times new roman</option>
+                <option>Calibri</option>
+              </select>
+            </div>
+          </form>  
+          <p class="settings">Size Settings</p>
+          <form>
+            <div class="form-group">
+              <label> Font Size :</label>
+              <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <label> Border Width :</label>
+              <select class="form-control">
+                <option>10px</option>
+                <option>12px</option>
+              </select>
+              <label> Border Radius :</label>
+              <select class="form-control">
+                <option>3px</option>
+                <option>5px</option>
+                <option>7px</option>
+                <option>9px</option>
+              </select>
+            </div>
+          </form> 
+        </div>
+        <div class="col-lg-2">
+          <p class="settings">Color Settings</p>
+          <form>
+            <div class="form-group">
+              <label> Font Color :</label>
+              <select class="form-control">
+                <option>black</option>
+                <option>white</option>
+              </select>
+              <label > Border Color :</label>
+              <select class="form-control">
+                <option>gray</option>
+                <option>black</option>
+              </select>
+              <label> Textfield Color :</label>
+              <select class="form-control">
+                <option>cyan</option>
+                <option>gray</option>
+                <option>blue</option>
+                <option>red</option>
+              </select>
+              <label> Textfield Opacity :</label>
+              <select class="form-control">
+                <option>0.5</option>
+                <option>0.7</option>
+              </select>
+            </div>
+          </form>
+          <p class="settings">Speed Settings</p>
+          <form>
+            <div class="form-group">
+              <label> Seconds per Image :</label>
+              <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </form>
+          <button type="button" class="btn btn-primary" onclick="update()">Update</button>
+        </div>
+        <div class="col-lg-8">
+          <div class="slideContainer">
+          	<div class="slider_wrapper">
+          		<div id="image_slider">
+          			<div class="mySlides"><img src="dist/images/peacock.jpg" id="img1">
+          			  <p class="caption">text 1</p>
+          			</div>
+          			<div class="mySlides"><img src="dist/images/kangaroo.jpg" id="img2">
+          			  <p class="caption">text 2</p>
+          			</div>
+          			<div class="mySlides"><img src="dist/images/elephant.jpg" id="img3">
+          			  <p class="caption">text 3</p>
+          			</div>
+          		</div>					
+              <a class="nvgt" id="prev" onclick="plusDivs(-1)">&#10096;</a>
+              <a class="nvgt" id="next" onclick="plusDivs(1)">&#10097;</a>
+          	</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+    
+    <script class="localJSAssets" src="dist/assets/js/jquery.js"></script>
+    <script class="localJSAssets" src="dist/assets/js/tether.js"></script>
+    <script class="localJSAssets" src="dist/assets/js/bootstrap.js"></script>
+    <script class="localJSAssets" type="text/javascript" src="dist/script.js"></script>
+    <script>
+        var directoryName = 'toro-project/'.toLowerCase();
+        var baseUrl = window.location.href.slice(0, window.location.href.indexOf(directoryName)) + directoryName; 
+          window.onload = function() {
+          var links = document.getElementsByClassName('localLinks'); 
+          var scripts = document.getElementsByClassName('localJSAssets');
+          var images = document.getElementsByTagName('img');
+          var allScripts = [];
+          
+          for (var i = 0; i < images.length; i++) {
+            images[i].src = `${baseUrl}${images[i].getAttribute('src')}`;
+          }
+          
+          for (var i = 0; i < links.length; i++) {
+            links[i].href = baseUrl + links[i].getAttribute('href');
+          }
+          
+          for (var i = 0; i < scripts.length; i++) {
+            allScripts.push(scripts[i]);
+          }
+          
+          for (var i = 0; i < allScripts.length; i++) {
+            var script = document.createElement('script'); 
+            script.src = baseUrl + allScripts[i].getAttribute('src');
+            // script.classList.add('localJSAssets')
+            document.getElementsByTagName('body')[0].appendChild(script);
+            var paras = document.getElementsByClassName('localJSAssets');
+            while(paras[0]) {
+              paras[0].parentNode.removeChild(paras[0]);
+            }
+          }
+        }
+    </script>
+  </body>
+</html>
